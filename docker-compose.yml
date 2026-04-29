@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  app:
+    build: .
+    image: railway-cutdown-app:latest
+    container_name: railway-cutdown-app
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+    command: ["hypercorn", "main:app", "--bind", "0.0.0.0:8000"]

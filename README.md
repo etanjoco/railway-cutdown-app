@@ -23,6 +23,28 @@ This example starts up a [FastAPI](https://fastapi.tiangolo.com/) server.
 - Clone locally and install packages with pip using `pip install -r requirements.txt`
 - Run locally using `hypercorn main:app --reload`
 
+## 🚀 Docker
+
+Run with Docker Compose:
+
+```bash
+docker compose up --build
+```
+
+Or run detached:
+
+```bash
+docker compose up -d --build
+```
+
+Stop the service:
+
+```bash
+docker compose down
+```
+
+The app will be available at http://localhost:8000/
+
 ## 📝 Notes
 
 - To learn about how to use FastAPI with most of its features, you can visit the [FastAPI Documentation](https://fastapi.tiangolo.com/tutorial/)
