@@ -10,3 +10,5 @@ services:
       - PYTHONUNBUFFERED=1
     restart: unless-stopped
     command: ["hypercorn", "main:app", "--bind", "0.0.0.0:8000"]
+    volumes:
+      - ./data:/app/data
